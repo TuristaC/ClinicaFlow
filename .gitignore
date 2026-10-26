@@ -1,0 +1,10 @@
+# Arquivos temporários do Visual Studio
+.vs/
+
+# Arquivos gerados pelo .NET
+**/bin/
+**/obj/
+
+# Configurações individuais do usuário
+*.user
+*.suo
