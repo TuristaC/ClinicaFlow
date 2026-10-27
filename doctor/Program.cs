@@ -35,9 +35,9 @@ decimal valorFinal = valorConsulta;
 
 if (consultaConfirmada && possuiCupom)
 {
-    valorFinal = valorConsulta - (valorConsulta * 0.20m);
+    valorFinal = valorConsulta - (valorConsulta * 0.10m);
 
-    Console.WriteLine("Desconto de 20% aplicado!");
+    Console.WriteLine("Desconto de 10% aplicado!");
 }
 else
 {
