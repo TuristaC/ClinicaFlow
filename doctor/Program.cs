@@ -1,11 +1,29 @@
 ﻿/* Aula 1 */
 
-string nomePaciente = "Mariana Oliveira";
-int idadePaciente = 27;
+Console.Write("Digite o nome do paciente: ");
+string? nomePaciente = Console.ReadLine();
+if (string.IsNullOrWhiteSpace(nomePaciente))
+{
+    Console.WriteLine("Erro: o nome do paciente é obrigatório.");
+    return;
+}
+Console.Write("Digite a idade do paciente: ");
+string? idadeInformada = Console.ReadLine();
+
+if (!int.TryParse(idadeInformada, out int idadePaciente) || idadePaciente < 0)
+{
+    Console.WriteLine("Erro: informe uma idade válida.");
+    return;
+}
 decimal valorConsulta = 220.50m;
 bool consultaConfirmada = true;
-string especialidade = "Cardiologia";
-
+Console.Write("Digite a especialidade: ");
+string? especialidade = Console.ReadLine();
+if (string.IsNullOrWhiteSpace(especialidade))
+{
+    Console.WriteLine("Erro: a especialidade é obrigatória.");
+    return;
+}
 Console.WriteLine("=== CLÍNICAFLOW ===");
 
 Console.WriteLine($"Paciente: {nomePaciente}");
